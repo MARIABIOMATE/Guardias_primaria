@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardias Primaria</title>
+
+  <!-- Ícono -->
+  <link rel="icon" type="image/png" href="icono.png" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Librería XLSX -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Cuadrante de Guardias</h1>
+    <button id="gestionBtn" class="btn-azul">
+      🗂️ Gestión de Ausencias
+    </button>
+  </header>
+
+  <!-- Panel lateral -->
+  <aside id="panelAusencias" class="panel">
+    <div class="panel-contenido">
+      <button id="cerrarPanel" class="btn-cerrar">✖</button>
+      <h2>Gestión de Ausencias</h2>
+      <div id="ausenciasContainer"></div>
+      <button id="agregarAusenciaBtn" class="btn-verde">➕ Añadir Ausencia</button>
+    </div>
+  </aside>
+
+  <!-- Tabla principal -->
+  <main>
+    <h2>Cuadrante de guardias</h2>
+    <table id="resultado">
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Clase</th>
+          <th>Profesor Ausente</th>
+          <th>Profesor Que Cubre</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
