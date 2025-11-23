@@ -1,0 +1,222 @@
+/* === ESTILOS GENERALES === */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f8f9fb;
+  color: #222;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* === ENCABEZADO === */
+.main-header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
+}
+
+/* === BOTÓN DE PANEL === */
+.toggle-panel-btn {
+  background-color: #004a99;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 15px;
+  font-size: 1em;
+}
+.toggle-panel-btn:hover {
+  background-color: #0058b3;
+}
+
+/* === PANEL LATERAL === */
+.panel-lateral {
+  position: fixed;
+  left: -400px;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background-color: #004a99;
+  color: white;
+  overflow-y: auto;
+  transition: left 0.4s ease;
+  z-index: 10;
+  box-shadow: 3px 0 8px rgba(0,0,0,0.3);
+}
+.panel-lateral.activo {
+  left: 0;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 12px;
+}
+.panel-header h2 {
+  font-size: 1.1em;
+}
+.cerrar-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* === FORMULARIO DE AUSENCIAS === */
+.form-ausencia {
+  padding: 10px 15px;
+}
+.form-area-clara {
+  background: #f5f8ff;
+  color: #111;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+.form-area-clara label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.form-area-clara input,
+.form-area-clara select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-guardar {
+  background-color: #004a99;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.btn-guardar:hover {
+  background-color: #005bc2;
+}
+
+/* === LISTA DE AUSENCIAS === */
+.lista-ausencias {
+  list-style: none;
+  padding: 0 15px;
+}
+.lista-ausencias li {
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lista-ausencias button {
+  background: none;
+  border: none;
+  color: #ffdede;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+/* === BOTÓN GENERAR === */
+.btn-generar {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: calc(100% - 30px);
+}
+.btn-generar:hover {
+  background-color: #0078e6;
+}
+
+/* === CUADRANTE === */
+.main-content {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+  text-transform: capitalize;
+}
+
+.dia-header td {
+  background-color: #004a99;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  border-top: 3px solid #99bde5;
+}
+
+.profesor-header td {
+  background-color: #f0f4ff;
+  color: #003366;
+  text-align: left;
+  font-weight: 600;
+  border-top: 1px solid #c0d0e8;
+}
+
+.btn-descargar {
+  background-color: #00994d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.btn-descargar:hover {
+  background-color: #00b359;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .panel-lateral {
+    width: 100%;
+    left: -100%;
+  }
+  .panel-lateral.activo {
+    left: 0;
+  }
+  th, td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+  .toggle-panel-btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+  }
+}
